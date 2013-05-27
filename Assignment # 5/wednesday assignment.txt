@@ -1,0 +1,93 @@
+symmetric_binary_root_count - Problem description
+An integer obtained by reversing the bits of a given integer A is denoted as bit-rev(A). For example, bit-rev(25) = 19, because the binary representation of 25 is 11001, and reversing those bits yields 10011, i.e. 19. Similarly, bit-rev(26) = 11 and bit-rev(11) = 13.
+
+A symmetric binary root of a given positive integer N is a positive integer A such that N = A * bit-rev(A). For example, the symmetric binary root of 50 is 10, because 10 * bit-rev(10) = 10 * 5 = 50. Note that 5 is not a symmetric binary root of 50. The number 286 has two symmetric binary roots: 22 and 26.
+
+Write a function:
+
+def symmetric_binary_root_count(n)
+
+that, given a positive integer N, returns the smallest symmetric binary root of N. The function should return −1 if N has no symmetric binary root.
+
+For example, given N = 3245 the function should return 55.
+
+Assume that:
+
+·   N is an integer within the range [1..2,147,483,647].
+Complexity:
+
+·   expected worst-case time complexity is O(sqrt(N));
+·   expected worst-case space complexity is O(1).
+
+
+
+
+
+
+
+
+
+
+Copyright 2009–2012 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+[12:38:32] Nazar Hussain: ==============================================
+[12:38:53] Nazar Hussain: heavy_decimal_count - Problem description
+A non-negative integer is called heavy if the average value of its digits in decimal representation exceeds 7.
+Assume that 0 has an average value of its digits equal to 0.
+
+For example, the number 8,698 is heavy because the average value of its digits is (8+6+9+8)/4 = 7.75.
+The number 53,141 has an average value of its digits of (5+3+1+4+1)/5 = 2.8, so it is not heavy.
+
+Write a function:
+
+def heavy_decimal_count(a,b)
+
+that, given two non-negative integers A and B, returns the number of heavy integers within the interval [A..B] (both ends included).
+
+Assume that:
+
+·   A is an integer within the range [0..200,000,000];
+·   B is an integer within the range [0..200,000,000];
+·   A ≤ B.
+For example, given A=8,675 and B=8,689 the function should return 5, because there are five heavy integers within the range [8,675..8,689]:
+
+8675    avg=6.50
+8676    avg=6.75
+8677    avg=7.00
+8678    avg=7.25    HEAVY
+8679    avg=7.50    HEAVY
+8680    avg=5.50
+8681    avg=5.75
+8682    avg=6.00
+8683    avg=6.25
+8684    avg=6.50
+8685    avg=6.75
+8686    avg=7.00
+8687    avg=7.25    HEAVY
+8688    avg=7.50    HEAVY
+8689    avg=7.75    HEAVY
+Complexity:
+
+·   expected worst-case time complexity is O((log(A)+log(B))3);
+·   expected worst-case space complexity is O(log(A)+log(B)).
+[12:39:11] Nazar Hussain: binary_gap - Problem description
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+
+For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001) and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps.
+
+Write a function
+
+def binary_gap(n)
+
+that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn&apos;t contain a binary gap.
+
+Assume that:
+
+·   N is an integer within the range [1..2,147,483,647].
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5.
+
+Complexity:
+
+·   expected worst-case time complexity is O(log(N));
+·   expected worst-case space complexity is O(1).
+Copyright 2009–2012 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+

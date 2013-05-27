@@ -1,0 +1,68 @@
+body{
+    background-color: yellow;
+}
+.box{
+    position:absolute;
+    left:550px;
+    width:300px;
+    height:300px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: mediumvioletred;
+    background-color: blueviolet;
+}
+.io-field{
+    position:relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:280px;
+}
+.clear{
+    clear:both;
+}
+.toolbox-btn{
+    position:relative;
+    float:right;
+    margin-top:5px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:5px;
+    width:80px;
+    height:40px;
+    text-align: center;
+    color:blueviolet;
+}
+.keypad{
+    position:absolute;
+    top:140px;
+    margin: 10px 10px 15px 10px;
+    width:210px;
+    height:130px;
+}
+.keypad-btn{
+    position:relative;
+    margin: 3px 2px 3px 2px;
+    width:25%;
+    height:25px;
+    text-align: center;
+    color:blueviolet;
+}
+
+.clr-btn{
+    position:relative;
+    float:right;
+    top:20px;
+    margin-right:10px;
+    width:80px;
+    height:115px;
+}
+
+.back-space {
+    margin-left:-58px;
+    position:absolute;
+    width:55px;
+    height:65px;
+    margin-top: -12px;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Examples of margins, padding, and borders</TITLE>
+    <STYLE type="text/css">
+
+
+        .login_bar {
+            position:absolute;
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            top:5px;
+            right:0px;
+            width:100%;
+        }
+        .login_bar li {
+            float:right;
+            padding:10px;
+            text-align:center;
+            width:auto;
+        }
+        .login_bar li a{
+            text-decoration:overline;
+        }
+        .login_bar li:last-child a{
+            text-decoration: none;
+        }
+        .login_bar li:not(:last-child):hover{
+            background:red;
+
+        }
+
+
+        .header {
+            position:absolute;
+            top:20px;
+            left:0px;
+            width:100%;
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+        }
+        .header li {
+            float:left;
+            margin-top:35px;
+            border:2px solid green;
+            border-radius:10px;
+            padding:8px;
+            background:mediumseagreen;
+            text-align:center;
+            width:18.25%;
+        }
+        .header li a{
+            text-decoration: none;
+        }
+        .header li.active:hover , .header li:last-child:hover , .header li:hover{
+            background:red
+        }
+        .header li.active{
+           background: yellow;
+        }
+
+        .header li:last-child{
+            background: darkseagreen;
+        }
+
+        .sidebar{
+            position: absolute;
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            top:17%;
+            left:15px;
+            width:15%;
+        }
+        .sidebar li {
+            border:2px solid green;
+            padding:0px;
+            background:yellowgreen;
+            text-align:center;
+            width:100%;
+        }
+        .sidebar li a{
+            text-decoration: none;
+        }
+        .sidebar li:hover{
+            background:darkgreen;
+        }
+        .sidebar li.active{
+            background: darkred;
+        }
+        .sidebar li a:visited{
+            background-color:blueviolet;
+        }
+
+        .container{
+            position:absolute;
+            top: 14%;
+            left:18%;
+            width:80%;
+            background:cyan;
+            bottom:56px;
+        }
+
+
+        .footer{
+            position:absolute;
+            list-style-type:none;
+            overflow:hidden;
+            bottom:0px;
+            left:0;
+            right:0;
+        }
+        .footer li {
+            float:left;
+            border:2px solid green;
+            padding:0px;
+            background:yellowgreen;
+            text-align:center;
+            width:18.25%;
+        }
+        .footer li a{
+            text-decoration: none;
+        }
+        .footer li:hover{
+            background:darkgreen;
+        }
+        .footer li.active{
+            background: darkred;
+        }
+
+        .pretty_table{
+            direction:rtl;
+            margin-top:200px;
+            margin-left:350px;
+            border-collapse: collapse;
+            border:1px solid #333333;
+            background-image: -moz-radial-gradient(center 45deg,circle cover, #cde6f9, #6191bf);
+            background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%,800, from(#cde6f9), to(#6191bf));
+            font-variant: small-caps;
+            font-size:1.2em;
+        }
+
+
+        .pretty_table tr:nth-child(even) th ,.pretty_table tr:nth-child(even) td{
+            color:#2a4763;
+        }
+
+        .pretty_table th , .pretty_table td{
+            padding:0.5em;
+            border:1px dotted #666666;
+            color: #632a39;
+
+        }
+
+        .pretty_table tr:hover th[scope=row] , .pretty_table tr:hover td{
+            background-color: #632a2a;
+            color: #fff;
+        }
+
+        .pretty_table caption{
+            caption-side: bottom;
+            text-align:right;
+            font-size: 0.9em;
+            font-style:italic;
+            padding: 0.5em 0;
+            letter-spacing: -2px;;
+        }
+
+        .pretty_table th[scope=col]{
+            border-bottom:2px solid #333333;
+            border-right:2px solid #333333;
+            color: #000;
+            background-color: #8fadcc;
+
+        }
+        .pretty_table th+th[scope=col]{
+            border-right:1px solid #666666;
+            color: #fff;
+            background-color: #7d98b3;
+        }
+
+        .pretty_table th[scope=row]{
+            border-right:2px solid #333333;
+            background-color: #b8cfe5;
+        }
+
+
+
+        .clear{
+            clear:both;
+        }
+
+
+    </STYLE>
+  </HEAD>
+  <BODY>
+
+
+    <ul class="header">
+      <li class="active"><a href="http://www.google.com">Home</a></li>
+      <li><a href="http://en.wikipedia.com">Deals</a></li>
+      <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+      <li><a href="http://www.hotmail.com">Wish list</a></li>
+      <li><a href="http://nextbridge.pk">About us</a></li>
+    </ul>
+
+
+    <ul class="sidebar">
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+    </ul>
+
+    <div class="container">
+        <table class="pretty_table" summary="hi,this is a test table">
+            <caption>Registered crimes in PAKISTAN during democratic government</caption>
+            <tr>
+              <th scope="col">Province</th>
+              <th scope="col">2008</th>
+              <th scope="col">2009</th>
+              <th scope="col">2010</th>
+              <th scope="col">2011</th>
+              <th scope="col">2012</th>
+            </tr>
+            <tr>
+                <th scope="row">Punjab</th>
+                <td>189</td>
+                <td>423</td>
+                <td>134</td>
+                <td>243</td>
+                <td>179</td>
+            </tr>
+            <tr>
+                <th scope="row">Sind</th>
+                <td>549</td>
+                <td>733</td>
+                <td>254</td>
+                <td>907</td>
+                <td>196</td>
+            </tr>
+            <tr>
+                <th scope="row">KPK</th>
+                <td>426</td>
+                <td>863</td>
+                <td>168</td>
+                <td>109</td>
+                <td>698</td>
+            </tr>
+            <tr>
+                <th scope="row">Balochistan</th>
+                <td>845</td>
+                <td>159</td>
+                <td>199</td>
+                <td>246</td>
+                <td>789</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <ul class="footer">
+        <li><a href="http://www.google.com">Home</a></li>
+        <li><a href="http://en.wikipedia.com">Deals</a></li>
+        <li><a href="http://mail.nxb.com.pk">Companies</a></li>
+        <li><a href="http://www.hotmail.com">Wish list</a></li>
+        <li><a href="http://nextbridge.pk">About us</a></li>
+    </ul>
+
+    <ul class="login_bar">
+        <li><a href="http://www.hotmail.com">New user? Signup here</a></li>
+        <li><a href="http://nextbridge.pk">Already member? Login here</a></li>
+        <li><a href="http://www.google.com">Welcome Guest</a></li>
+    </ul>
+  </BODY>
+</HTML>

@@ -1,0 +1,132 @@
+<html>
+    <head>
+      <title>Javascript based calculator</title>
+      <script src="jquery.js" ></script>
+      <link href="mine.css" rel="stylesheet" type="text/css"/>
+        <script>
+            $(document).ready(function(){
+                var Calculator = {
+                    vals : [],
+                    opr : [],
+                    answer:function(){
+                      var ans = 0;
+                      switch(this.opr[this.opr.length - 1]){
+                          case "+":
+                              ans = this.addition();
+                              break;
+                          case "-":
+                              ans = this.subtract();
+                              break;
+                          case "/":
+                              ans = this.division();
+                              break;
+                          case "*":
+                              ans = this.multiply();
+                              break;
+                          case "%":
+                              ans = this.remainder();
+                              break;
+                          case "x^y":
+                              ans = this.pow();
+                              break;
+                      }
+                      return ans;
+                    },
+                    addition:function(){
+                        return this.vals[this.vals.length-2] + this.vals[this.vals.length-1]
+                    },
+                    subtract:function(){
+                        return this.vals[this.vals.length-2] - this.vals[this.vals.length-1]
+                    },
+                    division:function(){
+                        return this.vals[this.vals.length-2] / this.vals[this.vals.length-1]
+                    },
+                    multiply:function(){
+                        return this.vals[this.vals.length-2] * this.vals[this.vals.length-1]
+                    },
+                    remainder:function(){
+                        return this.vals[this.vals.length-2] % this.vals[this.vals.length-1]
+                    },
+                    pow:function(){
+                        return Math.pow(this.vals[this.vals.length-2] , this.vals[this.vals.length-1])
+                    }
+                }
+
+               $(".keypad-num-btn").click(function(){
+                  if($(".io-field").val()=="0"){
+                      $(".io-field").val("")
+                  }
+                  $(".io-field").val( $(".io-field").val() + $(this).html());
+               });
+               $(".clr-btn").click(function(){
+                  $(".io-field").val("0");
+                   Calculator.vals = [];
+                   Calculator.opr = [];
+               });
+
+               $(".toolbox-btn").click(function(){
+                  Calculator.vals.push(parseFloat($(".io-field").val()));
+                  $(".io-field").val("0")
+                  Calculator.opr.push($(this).html())
+               });
+
+               $(".keypad-eql-btn").click(function(){
+                   Calculator.vals.push(parseFloat($(".io-field").val()));
+
+                   $(".io-field").val(Calculator.answer())
+
+               });
+
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <h1 style="text-align: center;color:darkviolet;">Calculator</h1>
+        <br/>
+
+        <div class="box">
+
+            <div class="io">
+                <input type="text" class="io-field" value="0" name="io-field">
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="toolbox">
+                <button class="toolbox-btn">+</button>
+                <button class="toolbox-btn">-</button>
+                <button class="toolbox-btn">*</button>
+                <button class="toolbox-btn">/</button>
+                <button class="toolbox-btn">%</button>
+                <button class="toolbox-btn">x^y</button>
+            </div>
+
+            <div class="keypad">
+                <button class="keypad-btn keypad-num-btn">7</button>
+                <button class="keypad-btn keypad-num-btn">8</button>
+                <button class="keypad-btn keypad-num-btn">9</button>
+                <button class="keypad-btn keypad-num-btn">4</button>
+                <button class="keypad-btn keypad-num-btn">5</button>
+                <button class="keypad-btn keypad-num-btn">6</button>
+                <button class="keypad-btn keypad-num-btn">1</button>
+                <button class="keypad-btn keypad-num-btn">2</button>
+                <button class="keypad-btn keypad-num-btn">3</button>
+                <button class="keypad-btn keypad-num-btn">.</button>
+                <button class="keypad-btn keypad-num-btn">0</button>
+                <button class="keypad-btn keypad-eql-btn">=</button>
+            </div>
+
+            <div>
+                <button class="clr-btn" style="color:red; ">Reset</button>
+            </div>
+
+        </div>
+
+
+
+    </body>
+
+
+</html>
